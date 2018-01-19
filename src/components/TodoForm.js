@@ -30,9 +30,5 @@ class TodoForm extends Component {
 }
 
 export default connect(null, { addTodo })(TodoForm)
-<<<<<<< HEAD
-// mapStateToProps and mapDispatchToProps
-=======
 
 // connect(mapStateToProps, mapDispatchToProps)(ReactComponent)
->>>>>>> 08b2cfcc6fb2d42476b96f82b4b93abfed36d50c
