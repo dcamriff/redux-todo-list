@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addTodo } from '../actions/todo.actions'
 
-
 class TodoForm extends Component {
   state = {
     newTodo: ''
@@ -17,7 +16,6 @@ class TodoForm extends Component {
     event.preventDefault()
     this.props.addTodo(this.state.newTodo)
   }
-
   render () {
     return (
       <form onSubmit={this.handleSubmit}>
@@ -29,8 +27,12 @@ class TodoForm extends Component {
       </form>
     )
   }
-
 }
 
 export default connect(null, { addTodo })(TodoForm)
+<<<<<<< HEAD
 // mapStateToProps and mapDispatchToProps
+=======
+
+// connect(mapStateToProps, mapDispatchToProps)(ReactComponent)
+>>>>>>> 08b2cfcc6fb2d42476b96f82b4b93abfed36d50c
