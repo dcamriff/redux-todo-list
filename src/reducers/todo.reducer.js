@@ -18,6 +18,7 @@ const initialState = [
 
 function todoReducer (state = initialState, action) {
   switch (action.type) {
+    
     case 'ADD_TODO':
       return [ ...state, action.todo ]
     case 'TOGGLE_TODO':
@@ -30,7 +31,15 @@ function todoReducer (state = initialState, action) {
       })
 
       return newState
-    default:
+    case 'EDIT_TODO':
+    return state.map(todo => {
+      if (todo.id === action.id) {
+        todo.task = action.todo
+      }
+      return todo
+    })
+    
+      default:
       return state
   }
 }

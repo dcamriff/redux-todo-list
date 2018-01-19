@@ -17,3 +17,11 @@ export function toggleTodo (id) {
     id
   }
 }
+
+export function editTodo (id, todo) {
+  return {
+    type: 'EDIT_TODO',
+    id,
+    todo
+  }
+}
