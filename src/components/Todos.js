@@ -1,18 +1,16 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
-class Todos extends Component {
-  render () {
-    return (
-      <div>
-        <ul>
-          {this.props.todos.map(todo => (
-            <li key={todo.id}>{todo.task}: {todo.completed.toString()}</li>
-          ))}
-        </ul>
-      </div>
-    )
-  }
+const Todos = (props) => {
+  return (
+    <div>
+      <ul>
+        {props.todos.map(todo => (
+          <li key={todo.id}>{todo.task}: {todo.completed.toString()}</li>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 Todos.defaultProps = {
@@ -25,4 +23,6 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Todos)
+const TodosWithRedux = connect(mapStateToProps)(Todos)
+
+export default TodosWithRedux
