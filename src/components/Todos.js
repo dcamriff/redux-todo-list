@@ -6,18 +6,17 @@ const Todos = (props) => {
   return (
     <div>
       <ul>
-        {props.todos.map(todo => (
-          <li key={todo.id} onClick={() => props.toggleTodo(todo.id)}>{todo.task}: {todo.completed.toString()}</li>
+        {props.todos.map((todo) => (
+          <li
+            key={todo.id}
+            onClick={() => props.toggleTodo(todo.id)}>
+            {todo.task}: {todo.completed.toString()}
+          </li>
         ))}
       </ul>
     </div>
   )
 }
-
-Todos.defaultProps = {
-  todos: []
-}
-
 const mapStateToProps = (state) => {
   return {
     todos: state.todos

@@ -1,8 +1,10 @@
+import uuid from 'uuid'
+
 export function addTodo (todoTask) {
   return {
     type: 'ADD_TODO',
     todo: {
-      id: 0,
+      id: uuid(),
       task: todoTask,
       completed: false
     }
