@@ -8,3 +8,10 @@ export function addTodo (todoTask) {
     }
   }
 }
+
+export function toggleTodo (id) {
+  return {
+    type: 'TOGGLE_TODO',
+    id
+  }
+}
